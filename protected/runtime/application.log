@@ -595,3 +595,693 @@ in /var/www/web/index.php (14)
 in /var/www/web/protected/forms/FrmSignUp.php (26)
 in /var/www/web/protected/controllers/SiteController.php (151)
 in /var/www/web/index.php (14)
+2013/10/26 13:03:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/daolm/PHP/www/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/daolm/PHP/www/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/daolm/PHP/www/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/daolm/PHP/www/yii/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/daolm/PHP/www/yii/framework/gii/generators/model/ModelCode.php(60): CModule->__get('db')
+#5 /home/daolm/PHP/www/yii/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /home/daolm/PHP/www/yii/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/daolm/PHP/www/yii/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost/web/index.php?r=gii/default/index
+---
+2013/10/26 13:26:17 [error] [exception.CException] exception 'CException' with message 'Property "Post.update_time" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('update_time', 1382768777)
+#1 /home/daolm/PHP/www/web/protected/models/Post.php(121): CActiveRecord->__set('update_time', 1382768777)
+#2 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1071): Post->beforeSave()
+#3 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#5 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#6 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#15 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#16 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:29:51 [error] [exception.CException] exception 'CException' with message 'Property "Post.author_id" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('author_id', 'test@framgia.co...')
+#1 /home/daolm/PHP/www/web/protected/models/Post.php(122): CActiveRecord->__set('author_id', 'test@framgia.co...')
+#2 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1071): Post->beforeSave()
+#3 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#5 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#6 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#15 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#16 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:30:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:30:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:37:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:37:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:39:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:39:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:41:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:41:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:41:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:41:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "log" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "request" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "urlManager" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.web.filters.CFilterChain] Running filter PostController.filteraccessControl()
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "user" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "session" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "db" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "themeManager" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/daolm/PHP/www/web/protected/views/post/_form.php (16)
+in /home/daolm/PHP/www/web/protected/views/post/create.php (18)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "clientScript" application component
+in /home/daolm/PHP/www/web/protected/views/post/_form.php (37)
+in /home/daolm/PHP/www/web/protected/views/post/create.php (18)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:51:18 [trace] [system.CModule] Loading "coreMessages" application component
+in /home/daolm/PHP/www/web/themes/designa/views/layouts/main.php (65)
+in /home/daolm/PHP/www/web/protected/views/layouts/column2.php (22)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "log" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "request" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "urlManager" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.web.filters.CFilterChain] Running filter PostController.filteraccessControl()
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "user" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "session" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "db" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "themeManager" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/daolm/PHP/www/web/protected/views/post/_form.php (16)
+in /home/daolm/PHP/www/web/protected/views/post/create.php (18)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "clientScript" application component
+in /home/daolm/PHP/www/web/protected/views/post/_form.php (37)
+in /home/daolm/PHP/www/web/protected/views/post/create.php (18)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:51:20 [trace] [system.CModule] Loading "coreMessages" application component
+in /home/daolm/PHP/www/web/themes/designa/views/layouts/main.php (65)
+in /home/daolm/PHP/www/web/protected/views/layouts/column2.php (22)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "log" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "request" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "urlManager" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.web.filters.CFilterChain] Running filter PostController.filteraccessControl()
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "user" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "session" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "db" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.db.ar.CActiveRecord] Post.insert()
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "coreMessages" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:51:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "errorHandler" application component
+2013/10/26 13:51:24 [trace] [system.CModule] Loading "themeManager" application component
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "log" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "request" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "urlManager" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.web.filters.CFilterChain] Running filter PostController.filteraccessControl()
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "user" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "session" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "db" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "themeManager" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/daolm/PHP/www/web/protected/views/post/_form.php (16)
+in /home/daolm/PHP/www/web/protected/views/post/create.php (18)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "clientScript" application component
+in /home/daolm/PHP/www/web/protected/views/post/_form.php (37)
+in /home/daolm/PHP/www/web/protected/views/post/create.php (18)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:58:39 [trace] [system.CModule] Loading "coreMessages" application component
+in /home/daolm/PHP/www/web/themes/designa/views/layouts/main.php (65)
+in /home/daolm/PHP/www/web/protected/views/layouts/column2.php (22)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (75)
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "log" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "request" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "urlManager" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.web.filters.CFilterChain] Running filter PostController.filteraccessControl()
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "user" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "session" application component
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "db" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `new`
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (61)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.db.ar.CActiveRecord] Post.insert()
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "coreMessages" application component
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 13:58:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 13:58:42 [trace] [system.CModule] Loading "errorHandler" application component
+2013/10/26 13:58:43 [trace] [system.CModule] Loading "themeManager" application component
+2013/10/26 14:01:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 14:01:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 14:08:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 14:08:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 14:09:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /home/daolm/PHP/www/web/protected/controllers/PostController.php (69)
+in /home/daolm/PHP/www/web/index.php (14)
+2013/10/26 14:09:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`newsProject`.`new`, CONSTRAINT `FK_user_new` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)). The SQL statement executed was: INSERT INTO `new` (`title`, `content`, `date_update`, `date_create`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /home/daolm/PHP/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/daolm/PHP/www/web/protected/controllers/PostController.php(69): CActiveRecord->save()
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=post/create
+HTTP_REFERER=http://localhost/web/index.php?r=post/create
+---
+2013/10/26 14:13:11 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/web/auth/CWebUser.php(146): CComponent->__get('username')
+#1 /home/daolm/PHP/www/web/protected/controllers/PostController.php(62): CWebUser->__get('username')
+#2 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#3 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#13 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=post/create
+---
+2013/10/26 14:13:31 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/web/auth/CWebUser.php(146): CComponent->__get('username')
+#1 /home/daolm/PHP/www/web/protected/controllers/PostController.php(62): CWebUser->__get('username')
+#2 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#3 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#13 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=post/create
+---
+2013/10/26 14:13:32 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/web/auth/CWebUser.php(146): CComponent->__get('username')
+#1 /home/daolm/PHP/www/web/protected/controllers/PostController.php(62): CWebUser->__get('username')
+#2 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#3 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#13 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=post/create
+---
+2013/10/26 14:13:42 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.email" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/web/auth/CWebUser.php(146): CComponent->__get('email')
+#1 /home/daolm/PHP/www/web/protected/controllers/PostController.php(62): CWebUser->__get('email')
+#2 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#3 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#13 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=post/create
+---
+2013/10/26 14:31:25 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "validatePassword".' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('validatePasswor...', Array)
+#1 /home/daolm/PHP/www/web/protected/components/UserIdentity.php(27): CActiveRecord->__call('validatePasswor...', Array)
+#2 /home/daolm/PHP/www/web/protected/components/UserIdentity.php(27): User->validatePassword('123456')
+#3 /home/daolm/PHP/www/web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /home/daolm/PHP/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 /home/daolm/PHP/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /home/daolm/PHP/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /home/daolm/PHP/www/web/protected/controllers/SiteController.php(117): CModel->validate()
+#8 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/26 15:09:57 [error] [exception.CException] exception 'CException' with message 'Property "Post.name" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/daolm/PHP/www/web/protected/views/post/view.php(18): CActiveRecord->__get('name')
+#2 /home/daolm/PHP/www/yii/framework/web/CBaseController.php(126): require('/home/daolm/PHP...')
+#3 /home/daolm/PHP/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/daolm/PHP...', Array, true)
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/daolm/PHP...', Array, true)
+#5 /home/daolm/PHP/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/daolm/PHP/www/web/protected/controllers/PostController.php(52): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('14')
+#8 /home/daolm/PHP/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#22 {main}
+REQUEST_URI=/web/index.php?r=post/view&id=14
+---
+2013/10/26 15:10:11 [error] [exception.CException] exception 'CException' with message 'Property "Post.name" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/daolm/PHP/www/web/protected/views/post/view.php(18): CActiveRecord->__get('name')
+#2 /home/daolm/PHP/www/yii/framework/web/CBaseController.php(126): require('/home/daolm/PHP...')
+#3 /home/daolm/PHP/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/daolm/PHP...', Array, true)
+#4 /home/daolm/PHP/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/daolm/PHP...', Array, true)
+#5 /home/daolm/PHP/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/daolm/PHP/www/web/protected/controllers/PostController.php(52): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('14')
+#8 /home/daolm/PHP/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#22 {main}
+REQUEST_URI=/web/index.php?r=post/view&id=14
+HTTP_REFERER=http://localhost/web/index.php?r=post/
+---
+2013/10/26 15:25:58 [error] [exception.CException] exception 'CException' with message 'Property "Post.delete" is not defined.' in /home/daolm/PHP/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/daolm/PHP/www/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('delete')
+#1 /home/daolm/PHP/www/web/protected/controllers/PostController.php(109): CActiveRecord->__get('delete')
+#2 [internal function]: PostController->actionDelete('14')
+#3 /home/daolm/PHP/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 /home/daolm/PHP/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 /home/daolm/PHP/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/daolm/PHP/www/yii/framework/web/CController.php(1116): CFilterChain->run()
+#8 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#9 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/daolm/PHP/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /home/daolm/PHP/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /home/daolm/PHP/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /home/daolm/PHP/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /home/daolm/PHP/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /home/daolm/PHP/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#17 /home/daolm/PHP/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/delete')
+#18 /home/daolm/PHP/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /home/daolm/PHP/www/web/index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/web/index.php?r=post/delete&id=14
+HTTP_REFERER=http://localhost/web/index.php?r=post/view&id=14
+---
