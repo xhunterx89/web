@@ -8,7 +8,6 @@
 
 <head>
 	<meta charset="UTF-8">
-	
 	<!-- Remove this line if you use the .htaccess -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -44,6 +43,8 @@
 				<?php $this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
 						array('label'=>'Home', 'url'=>array('/site/index')),
+                                                array('label'=>'News', 'url'=>array('/post/index')),
+                                                array('label'=>'Create new', 'url'=>array('/post/create')),
 						array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 						array('label'=>'Contact', 'url'=>array('/site/contact')),
 						array('label'=>'Signup', 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
@@ -211,8 +212,6 @@
 </div>
 
 <!-- Javascript - jQuery -->
-<script src="http://code.jquery.com/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.2.min.js"><\/script>')</script>
 
 <!--[if (gte IE 6)&(lte IE 8)]>
 <script src="js/selectivizr.js"></script>

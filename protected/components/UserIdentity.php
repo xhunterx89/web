@@ -19,13 +19,13 @@ class UserIdentity extends CUserIdentity
                                    $this->errorCode=self::ERROR_USERNAME_INVALID;
                }
        else if($record->password!==$this->password)            // here I compare db password with passwod field
-               {        $this->_id=$this->username;
+               {       $this->_id=$this->username;
                        $this->errorCode=self::ERROR_PASSWORD_INVALID;
                }
        else
        {  
-          $this->_id=$record['email'];
-           $this->errorCode=self::ERROR_NONE;
+            $this->_id=$record['id'];
+            $this->errorCode=self::ERROR_NONE;
 
        }
        return !$this->errorCode;
