@@ -43,12 +43,13 @@
 				<?php $this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
 						array('label'=>'Home', 'url'=>array('/site/index')),
-                                                array('label'=>'News', 'url'=>array('/post/index')),
-                                                array('label'=>'Create new', 'url'=>array('/post/create')),
+                        array('label'=>'News', 'url'=>array('/post/index')),
+                        array('label'=>'Create new', 'url'=>array('/post/create'), 'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 						array('label'=>'Contact', 'url'=>array('/site/contact')),
 						array('label'=>'Signup', 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+						array('label'=>'Profile ('.Yii::app()->user->name.')', 'url'=>array('/user/view','id'=>Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 				)); ?>

@@ -110,13 +110,13 @@ class SiteController extends Controller
 
                 if(isset($_POST['LoginForm']))
                 {
-                
-                        $model->attributes=$_POST['LoginForm'];
+                		$model->attributes=$_POST['LoginForm'];
                         
                         // validate user input and redirect to the previous page if valid
                         if($model->validate() && $model->login())
                         {
-                        	$this->redirect(Yii::app()->user->returnUrl);
+                        	$id=Yii::app()->user->id;
+							$this->redirect(array('user/view','id'=>$id));
                         }
                                 
                 }
@@ -145,22 +145,19 @@ class SiteController extends Controller
 
 		if(isset($_POST['FrmSignUp']))
 		{
-			$model->attributes = $_POST['FrmSignUp'];
-			if($model->validate()){
-				if($model->addNew())
-				{
-					$this->beginWidget('zii.widgets.jui.CJuiDialog', 
-						array('options'=>array(
-            					'title'=>'Message', 
-            					'modal'=>true, 
-            					'buttons'=>array('OK'=>'js:function(){$(this).dialog("close")}')
-            					)
-						)
-					);
-					echo 'Successful!';
-					$this->endWidget('zii.widgets.jui.CJuiDialog');
-				}
-			}
+			$user=new User;
+			$user->username=$_POST['FrmSignUp']['username'];
+			$user->password=$_POST['FrmSignUp']['password'];
+			$user->email=$_POST['FrmSignUp']['email'];
+			if($user->save())
+					 $login=new LoginForm;
+			         $login->username = $_POST['FrmSignUp']['username'];
+			         $login->password = $_POST['FrmSignUp']['password'];
+			         if($login->validate() && $login->login())
+					 {
+					 	$id=Yii::app()->user->id;
+			            $this->redirect(array('user/view','id'=>$id));
+			         }
 		}
 
 		$this->render('forms/member/signup',array('model'=>$model));
