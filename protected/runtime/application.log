@@ -32,3 +32,566 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/testdrive/index.php?r=user/admin
 ---
+2013/10/25 15:16:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signup".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('signup')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/web/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php
+---
+2013/10/25 15:29:45 [error] [exception.CException] exception 'CException' with message 'Property "FrmSignUp.ten" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/web/helpers/CHtml.php(2255): CComponent->__get('ten')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(FrmSignUp), 'ten')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(FrmSignUp), 'ten', Array)
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(FrmSignUp), 'ten', Array)
+#4 /var/www/web/protected/views/site/forms/member/signup.php(24): CActiveForm->textField(Object(FrmSignUp), 'ten')
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/web/pr...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/web/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/web/pr...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('forms/member/si...', Array, true)
+#9 /var/www/web/protected/controllers/SiteController.php(112): CController->render('forms/member/si...', Array)
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#11 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/web/index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php
+---
+2013/10/25 15:55:56 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (124)
+in /var/www/web/index.php (14)
+2013/10/25 15:55:56 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (124)
+in /var/www/web/index.php (14)
+2013/10/25 15:59:07 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (124)
+in /var/www/web/index.php (14)
+2013/10/25 15:59:07 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (124)
+in /var/www/web/index.php (14)
+2013/10/25 15:59:33 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (124)
+in /var/www/web/index.php (14)
+2013/10/25 15:59:33 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (124)
+in /var/www/web/index.php (14)
+2013/10/25 16:00:32 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:00:32 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:23:35 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:23:35 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:35:07 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:35:07 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:41:05 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:41:05 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:53:58 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:53:58 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (25)
+in /var/www/web/protected/controllers/SiteController.php (128)
+in /var/www/web/index.php (14)
+2013/10/25 16:59:13 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'usr_username' in 'where clause'. The SQL statement executed was: SELECT * FROM `user` `t` WHERE LOWER(usr_username)=? LIMIT 1.
+in /var/www/web/protected/components/UserIdentity.php (37)
+in /var/www/web/protected/models/LoginForm.php (52)
+in /var/www/web/protected/controllers/SiteController.php (98)
+2013/10/25 16:59:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'usr_username' in 'where clause'. The SQL statement executed was: SELECT * FROM `user` `t` WHERE LOWER(usr_username)=? LIMIT 1' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 /var/www/web/protected/components/UserIdentity.php(37): CActiveRecord->find('LOWER(usr_usern...', Array)
+#4 /var/www/web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#5 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#8 /var/www/web/protected/controllers/SiteController.php(98): CModel->validate()
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/web/index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/web/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/25 16:59:57 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "validatePassword".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('validatePasswor...', Array)
+#1 /var/www/web/protected/components/UserIdentity.php(42): CActiveRecord->__call('validatePasswor...', Array)
+#2 /var/www/web/protected/components/UserIdentity.php(42): User->validatePassword('123456')
+#3 /var/www/web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(98): CModel->validate()
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/25 17:00:25 [error] [php] Undefined variable: user (/var/www/web/protected/components/UserIdentity.php:45)
+Stack trace:
+#0 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#1 /var/www/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/web/protected/controllers/SiteController.php(98): LoginForm->validate()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/web/index.php(14): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=site/login
+in /var/www/web/protected/components/UserIdentity.php (45)
+in /var/www/web/protected/models/LoginForm.php (52)
+in /var/www/web/protected/controllers/SiteController.php (98)
+2013/10/25 17:13:06 [error] [php] include(Employee.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/web/protected/components/UserIdentity.php(15): spl_autoload_call()
+#1 /var/www/web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate()
+#3 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#4 /var/www/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#5 /var/www/web/protected/controllers/SiteController.php(117): LoginForm->validate()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/web/index.php(14): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=site/login
+in /var/www/web/protected/components/UserIdentity.php (15)
+in /var/www/web/protected/models/LoginForm.php (52)
+in /var/www/web/protected/controllers/SiteController.php (117)
+2013/10/25 17:13:50 [error] [exception.CDbException] exception 'CDbException' with message 'Table "user" does not have a column named "E_EMAIL".' in /var/www/yii/framework/db/schema/CDbCommandBuilder.php:591
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /var/www/web/protected/components/UserIdentity.php(15): CActiveRecord->findByAttributes(Array)
+#2 /var/www/web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/web/protected/controllers/SiteController.php(117): CModel->validate()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/25 17:14:14 [error] [exception.CException] exception 'CException' with message 'Property "User.E_PASSWORD" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('E_PASSWORD')
+#1 /var/www/web/protected/components/UserIdentity.php(21): CActiveRecord->__get('E_PASSWORD')
+#2 /var/www/web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/web/protected/controllers/SiteController.php(117): CModel->validate()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/25 17:14:34 [error] [exception.CException] exception 'CException' with message 'Property "User.E_STATUS" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('E_STATUS')
+#1 /var/www/yii/framework/base/CModel.php(595): CActiveRecord->__get('E_STATUS')
+#2 /var/www/web/protected/components/UserIdentity.php(25): CModel->offsetGet('E_STATUS')
+#3 /var/www/web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(117): CModel->validate()
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/25 17:15:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page_after_login".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('page_after_logi...')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('page_after_logi...')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page_after...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/web/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/index.php?r=site/page_after_login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/25 17:16:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page_after_login".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('page_after_logi...')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('page_after_logi...')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page_after...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/web/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/index.php?r=site/page_after_login
+HTTP_REFERER=http://localhost/web/index.php?r=site/login
+---
+2013/10/25 17:21:45 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/yii/framework/web/widgets/CActiveForm.php(835): CModel->validate(NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(140): CActiveForm::validate(Object(FrmSignUp))
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:21:48 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/yii/framework/web/widgets/CActiveForm.php(835): CModel->validate(NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(140): CActiveForm::validate(Object(FrmSignUp))
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:22:33 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/web/protected/controllers/SiteController.php(147): CModel->validate()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:22:45 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/yii/framework/web/widgets/CActiveForm.php(835): CModel->validate(NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(140): CActiveForm::validate(Object(FrmSignUp))
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:22:52 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/yii/framework/web/widgets/CActiveForm.php(835): CModel->validate(NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(140): CActiveForm::validate(Object(FrmSignUp))
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:22:55 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/yii/framework/web/widgets/CActiveForm.php(835): CModel->validate(NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(140): CActiveForm::validate(Object(FrmSignUp))
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:22:59 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/yii/framework/web/widgets/CActiveForm.php(835): CModel->validate(NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(140): CActiveForm::validate(Object(FrmSignUp))
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:23:04 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/yii/framework/web/widgets/CActiveForm.php(835): CModel->validate(NULL)
+#7 /var/www/web/protected/controllers/SiteController.php(140): CActiveForm::validate(Object(FrmSignUp))
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/web/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:23:04 [error] [exception.CException] exception 'CException' with message 'FrmSignUp and its behaviors do not have a method or closure named "tableName".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(2308): FrmSignUp->tableName()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(FrmSignUp))
+#3 /var/www/yii/framework/validators/CUniqueValidator.php(87): CActiveRecord::model('FrmSignUp')
+#4 /var/www/yii/framework/validators/CValidator.php(213): CUniqueValidator->validateAttribute(Object(FrmSignUp), 'username')
+#5 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(FrmSignUp), NULL)
+#6 /var/www/web/protected/controllers/SiteController.php(147): CModel->validate()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/web/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:23:26 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (152)
+in /var/www/web/index.php (14)
+2013/10/25 17:23:26 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (152)
+in /var/www/web/index.php (14)
+2013/10/25 17:23:29 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (152)
+in /var/www/web/index.php (14)
+2013/10/25 17:23:29 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (152)
+in /var/www/web/index.php (14)
+2013/10/25 17:33:32 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/25 17:33:32 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/25 17:33:32 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "Home".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('Home', Array, true)
+#1 /var/www/web/protected/controllers/SiteController.php(150): CController->render('Home', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('signup')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/web/index.php(14): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/index.php?r=site/signup
+HTTP_REFERER=http://localhost/web/index.php?r=site/signup
+---
+2013/10/25 17:35:39 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/25 17:35:39 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/25 17:44:44 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/25 17:44:44 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/26 08:48:39 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/26 08:48:39 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (148)
+in /var/www/web/index.php (14)
+2013/10/26 08:56:28 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (152)
+in /var/www/web/index.php (14)
+2013/10/26 08:56:28 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (152)
+in /var/www/web/index.php (14)
+2013/10/26 08:59:10 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (151)
+in /var/www/web/index.php (14)
+2013/10/26 08:59:10 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (151)
+in /var/www/web/index.php (14)
+2013/10/26 09:05:44 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (151)
+in /var/www/web/index.php (14)
+2013/10/26 09:05:44 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (151)
+in /var/www/web/index.php (14)
+2013/10/26 09:10:17 [warning] [application] Failed to set unsafe attribute "confirm_password" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (151)
+in /var/www/web/index.php (14)
+2013/10/26 09:10:17 [warning] [application] Failed to set unsafe attribute "verify_code" of "User".
+in /var/www/web/protected/forms/FrmSignUp.php (26)
+in /var/www/web/protected/controllers/SiteController.php (151)
+in /var/www/web/index.php (14)

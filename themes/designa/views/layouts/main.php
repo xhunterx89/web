@@ -29,7 +29,6 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-
 <body>
 <!-- Prompt IE 7 users to install Chrome Frame -->
 <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -47,13 +46,13 @@
 						array('label'=>'Home', 'url'=>array('/site/index')),
 						array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 						array('label'=>'Contact', 'url'=>array('/site/contact')),
+						array('label'=>'Signup', 'url'=>array('/site/signup'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 				)); ?>
 		</nav>
 	</header>
-
 
 <div class="home-page main">
 	<section class="grid-wrap" >
