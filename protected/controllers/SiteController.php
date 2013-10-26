@@ -75,29 +75,53 @@ class SiteController extends Controller
 	/**
 	 * Displays the login page
 	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
+	// public function actionLogin()
+	// {
+	// 	$model=new LoginForm;
 
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+	// 	// if it is ajax validation request
+	// 	if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+	// 	{
+	// 		echo CActiveForm::validate($model);
+	// 		Yii::app()->end();
+	// 	}
 
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
+	// 	// collect user input data
+	// 	if(isset($_POST['LoginForm']))
+	// 	{
+	// 		$model->attributes=$_POST['LoginForm'];
+	// 		// validate user input and redirect to the previous page if valid
+	// 		if($model->validate() && $model->login())
+	// 			$this->redirect(Yii::app()->user->returnUrl);
+	// 	}
+	// 	// display the login form
+	// 	$this->render('login',array('model'=>$model));
+	// }
 
+		public function actionLogin()
+        {
+                $model=new LoginForm;
+                
+                if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+                {
+                        echo CActiveForm::validate($model);
+                        Yii::app()->end();
+                }
+
+                if(isset($_POST['LoginForm']))
+                {
+                
+                        $model->attributes=$_POST['LoginForm'];
+                        
+                        // validate user input and redirect to the previous page if valid
+                        if($model->validate() && $model->login())
+                        {
+                        	$this->redirect(Yii::app()->user->returnUrl);
+                        }
+                                
+                }
+                        $this->render('login',array('model'=>$model));
+}
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
@@ -107,5 +131,48 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
-	
+
+	public function actionSignup()
+	{
+		$model = new FrmSignUp();
+
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='frm-signup')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
+		if(isset($_POST['FrmSignUp']))
+		{
+			$model->attributes = $_POST['FrmSignUp'];
+			if($model->validate()){
+				if($model->addNew())
+				{
+					$this->beginWidget('zii.widgets.jui.CJuiDialog', 
+						array('options'=>array(
+            					'title'=>'Message', 
+            					'modal'=>true, 
+            					'buttons'=>array('OK'=>'js:function(){$(this).dialog("close")}')
+            					)
+						)
+					);
+					echo 'Successful!';
+					$this->endWidget('zii.widgets.jui.CJuiDialog');
+				}
+			}
+		}
+
+		$this->render('forms/member/signup',array('model'=>$model));
+	}
+
+	public function authenticate($attribute,$params)
+        {
+                if(!$this->hasErrors())
+                {
+                        $this->_identity=new UserIdentity($this->username,$this->password);
+                        if(!$this->_identity->authenticate())
+                                $this->addError('password','Incorrect username or password.');
+                }
+        }
 }
