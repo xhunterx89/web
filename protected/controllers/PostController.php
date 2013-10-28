@@ -33,11 +33,11 @@ class PostController extends Controller
                   'users'=>array('*'),
               ),
               array('allow',
-              		'actions'=>array('create'),
+              		'actions'=>array('create','admin'),
                   'users'=>array('@'),
               ),
               array('allow', 
-                        'actions'=>array('update','delete','admin'),
+                        'actions'=>array('update','delete'),
                         'expression'=>"Yii::app()->controller->isPostOwner()"),
               array('deny',
                    'users'=>array('*'),
@@ -173,11 +173,7 @@ class PostController extends Controller
             {
                 if(isset($_GET['id']))
                 {
-                    if(Yii::app()->user->isGuest)
-                        $condition='status='.Post::STATUS_PUBLISHED
-                        .' OR status='.Post::STATUS_ARCHIVED;
-                    else
-                        $condition='';
+                    $condition='';
                         
                     $this->_model=Post::model()->findByPk($_GET['id'], $condition);
                 }
