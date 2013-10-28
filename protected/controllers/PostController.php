@@ -33,12 +33,23 @@ class PostController extends Controller
                   'users'=>array('*'),
               ),
               array('allow',
+              		'actions'=>array('create'),
                   'users'=>array('@'),
               ),
+              array('allow', 
+                        'actions'=>array('update','delete','admin'),
+                        'expression'=>"Yii::app()->controller->isPostOwner()"),
               array('deny',
                    'users'=>array('*'),
               ),
             );
+	}
+	function isPostOwner() {
+        $post = Post::model()->findByPk($_GET['id']);
+        $owner_id = $post->user_id;
+        if(Yii::app()->user->id === $owner_id)
+            return true;
+        return false;
 	}
 
 	/**
@@ -80,21 +91,26 @@ class PostController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		
 		$model=$this->loadModel($id);
-
+		if($model->user_id==Yii::app()->user->id){
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Post']))
-		{
-			$model->attributes=$_POST['Post'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if(isset($_POST['Post']))
+			{
+				$model->attributes=$_POST['Post'];
+				if($model->save())
+					$this->redirect(array('view','id'=>$model->id));
+			}
+		
+			$this->render('update',array(
+				'model'=>$model,
+			));
 		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+		else {
+			$this->redirect (array('admin'));
+		}
 	}
 
 	/**
@@ -106,8 +122,9 @@ class PostController extends Controller
 	{
 		if (Yii::app()->request->isPostRequest)
                 {
-                    $this->loadModel()->delete();
-                    
+                	if($this->loadModel()->user_id==Yii::app()->user->id)	
+                    	$this->loadModel()->delete();
+					                    
                     if (!isset($_GET['ajax']))
                         $this->redirect (array('index'));
                 }
